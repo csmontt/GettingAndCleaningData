@@ -78,15 +78,19 @@ data <- data[, c(1,2,which(names(data) %in% means_stds))]
 
 data <- tbl_df(data)
 
+# I cleaned up a bit the varaible names, taking out the - and () 
+# characters
 names(data) <- gsub("-", "", names(data))
 names(data) <- gsub("\\(\\)", "", names(data))
 
+# Use dplyr´s group_by in combination with summarize_Each, to 
+# calculate the average of each variable for each activity 
+# and each subject.
 data_tidy <- data %>% group_by(activity, id) %>%
                 summarize_each(funs(mean))
 
-# data_tidy is the second indepent tidy dataset, with the average of
+# data_tidy is the second indepentdent tidy dataset, with the average of
 # each measurement group by activity and subject id.
-
 
 # write tidy data into .txt file
 write.table(data_tidy, file = "data_tidy.txt", row.name=FALSE)
