@@ -89,5 +89,5 @@ data_tidy <- data %>% group_by(activity, id) %>%
 
 
 # write tidy data into .txt file
-write.table(data_tidy, file = "data_tidy.txt")
+write.table(data_tidy, file = "data_tidy.txt", row.name=FALSE)
                 
