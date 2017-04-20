@@ -23,31 +23,9 @@ I read each .txt file into R, then I cbinded the measurement data with the subje
 for the test and train dataset separately. Afterwards, I rbinded the data from the test and train datasets. Hence,
 I assumed that the rows of each .txt file were in the same order.
 
-By extracting only the measurements corresponding to means and stds, I ended with 68 features:
-
- [1] "id"                       "activity"                 "tBodyAccmeanX"           
- [4] "tBodyAccmeanY"            "tBodyAccmeanZ"            "tBodyAccstdX"            
- [7] "tBodyAccstdY"             "tBodyAccstdZ"             "tGravityAccmeanX"        
-[10] "tGravityAccmeanY"         "tGravityAccmeanZ"         "tGravityAccstdX"         
-[13] "tGravityAccstdY"          "tGravityAccstdZ"          "tBodyAccJerkmeanX"       
-[16] "tBodyAccJerkmeanY"        "tBodyAccJerkmeanZ"        "tBodyAccJerkstdX"        
-[19] "tBodyAccJerkstdY"         "tBodyAccJerkstdZ"         "tBodyGyromeanX"          
-[22] "tBodyGyromeanY"           "tBodyGyromeanZ"           "tBodyGyrostdX"           
-[25] "tBodyGyrostdY"            "tBodyGyrostdZ"            "tBodyGyroJerkmeanX"      
-[28] "tBodyGyroJerkmeanY"       "tBodyGyroJerkmeanZ"       "tBodyGyroJerkstdX"       
-[31] "tBodyGyroJerkstdY"        "tBodyGyroJerkstdZ"        "tBodyAccMagmean"         
-[34] "tBodyAccMagstd"           "tGravityAccMagmean"       "tGravityAccMagstd"       
-[37] "tBodyAccJerkMagmean"      "tBodyAccJerkMagstd"       "tBodyGyroMagmean"        
-[40] "tBodyGyroMagstd"          "tBodyGyroJerkMagmean"     "tBodyGyroJerkMagstd"     
-[43] "fBodyAccmeanX"            "fBodyAccmeanY"            "fBodyAccmeanZ"           
-[46] "fBodyAccstdX"             "fBodyAccstdY"             "fBodyAccstdZ"            
-[49] "fBodyAccJerkmeanX"        "fBodyAccJerkmeanY"        "fBodyAccJerkmeanZ"       
-[52] "fBodyAccJerkstdX"         "fBodyAccJerkstdY"         "fBodyAccJerkstdZ"        
-[55] "fBodyGyromeanX"           "fBodyGyromeanY"           "fBodyGyromeanZ"          
-[58] "fBodyGyrostdX"            "fBodyGyrostdY"            "fBodyGyrostdZ"           
-[61] "fBodyAccMagmean"          "fBodyAccMagstd"           "fBodyBodyAccJerkMagmean" 
-[64] "fBodyBodyAccJerkMagstd"   "fBodyBodyGyroMagmean"     "fBodyBodyGyroMagstd"     
-[67] "fBodyBodyGyroJerkMagmean" "fBodyBodyGyroJerkMagstd" 
+By extracting only the measurements corresponding to means and stds, I ended with 68 variables,
+the first two are id variables, "id" denotes the subject id, "activity", denotes the activity label,
+while the rest correspond to the average of each feature group by activity and subject id.
 
 "id" corresponds to the subject id, it ranges from 1 to 30.
 "activity" correspond to the activity label performed by the subject. It has six levels,
