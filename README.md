@@ -12,7 +12,7 @@ tasks of the course project. The script is explain with comments. In the last
 line, the command write.table is used to write the final tidy data into a 
 .txt file.
 
-3. data_tidy.txt is the final dataset, constructed with the run_analysis.R script
+
    
  
 	
