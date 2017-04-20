@@ -86,6 +86,8 @@ names(data) <- gsub("\\(\\)", "", names(data))
 # Use dplyr´s group_by in combination with summarize_Each, to 
 # calculate the average of each variable for each activity 
 # and each subject.
+
+library(dplyr)
 data_tidy <- data %>% group_by(activity, id) %>%
                 summarize_each(funs(mean))
 
